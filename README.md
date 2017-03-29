@@ -1,5 +1,7 @@
 # Pokemon Gemini
 
+(This game and source code *are not* licensed or open-source. The source is public for educational purposes only, and is not to be reproduced, redistributed, or modified without express permission from its creator.)
+
 ## Story
 
 Pokemon Gemini is a pair of Pokemon fan games, being developed from the ground up, that introduce the player to a brand new region: Gemini!
