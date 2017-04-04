@@ -53,7 +53,9 @@
       </sprites>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\RegionTiles</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Init">
@@ -103,6 +105,7 @@
     </objects>
     <objects name="Managers">
       <object>objects\SoundManager</object>
+      <object>objects\RegionManager</object>
     </objects>
   </objects>
   <rooms name="rooms">
