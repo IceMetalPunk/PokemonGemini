@@ -26,10 +26,13 @@ Damage:
 Targets = 0.75 + (0.25 * (targets.length == 1));
 Weather = 1 + 0.5 * (weather_boosts_type - weather_weakens_type);
 Crit = 1 + 0.5 * isCrit;
+
+--> isCrit = irandom(255) < pokemon.speed/2 * (1 + 7 * isHighCritMove)
+
 Rand = random(0.85, 1.0)
 STAB = 1 + ((0.5 + (pokemon.ability == Adaptability)) * (move.type == pokemon.type));
-Type = !isImmuneToType * 1 / pow(2, weakTypes.length) * pow(2, strongTypes.length)
-Burn = 1 - 0.5 * (isBurned && move.isPhysical && pokemon.ability != Guts)
+Type = !isImmuneToType * pow(2, strongTypes.length) / pow(2, weakTypes.length)
+Burn = 1 - 0.5 * (isBurned && move.isPhysical && !move.directDamage && pokemon.ability != Guts)
 Other = Usually 1, but can change in specific situations or with abilities; see bookmarked page for table
 
 Modifier = Targets * Weather * Crit * Rand * STAB * Type * Burn * Other

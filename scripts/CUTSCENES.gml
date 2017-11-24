@@ -11,12 +11,13 @@
 [Zoom into hospital, pan past rooms, fade logo in and out while panning in the hallway]
 
 [Music: continues looping Valentine #1]
-[Camera: Stops at player at nurse's station]
-Nurse: "All visitors must fill out a sign-in form. That's the rules, to keep the patients safe."
+[Camera: Stops at player at nurse's station; player from behind, nurse from front. Player's hoodie hides any features.]
+Nurse: "All visitors must fill out a sign-in form. That's the rule, to keep the patients safe."
 
 [Screen: the form "flies" from the desk up to the camera, and player can enter name and gender.]
 [Screen: the form "flies" back onto the desk before continuing the cutscene.]
 
+[Camera: Rotates to show player's face (now based on gender chosen) and follows them.]
 [Player: walks into a room]
 [Camera: cuts to inside the room. Player is there with their mother in bed.]
 

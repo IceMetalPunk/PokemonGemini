@@ -76,6 +76,15 @@
     </scripts>
     <scripts name="Battling">
       <script>scripts\adjust_levels.gml</script>
+      <scripts name="XP_Level_Functions">
+        <script>scripts\lvl2xp_fast.gml</script>
+        <script>scripts\lvl2xp_slow.gml</script>
+        <script>scripts\lvl2xp_medfast.gml</script>
+        <script>scripts\lvl2xp_medslow.gml</script>
+        <script>scripts\lvl2xp_erratic.gml</script>
+        <script>scripts\lvl2xp_fluctuating.gml</script>
+        <script>scripts\lvl2xp.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Documentation">
       <script>scripts\CREDITS_AND_NOTES.gml</script>

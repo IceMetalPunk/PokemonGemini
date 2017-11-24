@@ -31,14 +31,15 @@ SPECIES = Map {
     "evolutions": [list_of_evolution_maps],
     "evolvesFrom": int_species_id,
     "genderThreshold": int,
-    "baseStats": { map_of_statName=>int_base_value }
-    "EVs": { map_of_statName=>int_ev_value_from_0_to_3 }
+    "baseStats": { map_of_statName=>int_base_value },
+    "EVs": { map_of_statName=>int_ev_value_from_0_to_3 },
+    "exp_group": string_lvl2xp_group_name
 }
 
 POKEMON =  Map {
     "level": int,
     "name": string,
-    "species": string_species_name,
+    "species": int_species_id,
     "hp": int,
     "maxHP": int,
     "attack": int,
@@ -51,6 +52,7 @@ POKEMON =  Map {
     "statusEffects": [list_of_int_status_ids],
     "holdingItem": int_item_id,
     "nature": string?,
+    "personality": int_personality_value,
     "moves": [list_of_moves],
     "xp": int,
     "flags": { map_of_flagName=>flagValue }
