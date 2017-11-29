@@ -20,7 +20,7 @@ EVOLUTION = Map {
 
 EVOLUTION_REQUIREMENTS = Map {
     "type": string (knowsMove || holdingItem || gender),
-    "value": string
+    "value": int (moveID, itemID, or 0=genderless/1=male/2=female)
 }
 
 SPECIES = Map {
@@ -53,7 +53,8 @@ POKEMON =  Map {
     "holdingItem": int_item_id,
     "nature": string?,
     "personality": int_personality_value,
-    "moves": [list_of_moves],
+    "gender": int (0=genderless, 1=male, 2=female)
+    "moves": [list_of_move_ids],
     "xp": int,
     "flags": { map_of_flagName=>flagValue }
 }

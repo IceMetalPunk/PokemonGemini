@@ -28,5 +28,6 @@ if (pAvg > oAvg) {
     for (i = 0; i < ds_list_size(argument0); ++i) {
         mon = argument0[| i];
         mon[? "level"] += diff;
+        evolve_proper(mon);
     }
 }

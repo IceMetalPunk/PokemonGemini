@@ -85,6 +85,8 @@
         <script>scripts\lvl2xp_fluctuating.gml</script>
         <script>scripts\lvl2xp.gml</script>
       </scripts>
+      <script>scripts\evolve_proper.gml</script>
+      <script>scripts\has_requirements.gml</script>
     </scripts>
     <scripts name="Documentation">
       <script>scripts\CREDITS_AND_NOTES.gml</script>
