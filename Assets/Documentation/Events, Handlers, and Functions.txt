@@ -1,0 +1,160 @@
+Event handler list: An object with keys which are event names, whose values are arrays of Handlers.
+
+Handler: An object with Function key names and values which pass parameters to those functions.
+NOTE: All events pass a parameter called "Self" which is a Map referring to the current instance of the move, Pokemon, player, etc. in which the handler is defined.
+NOTE: All events pass a parameter called "Environment", which is a map referering to the current "weather" and "location" (underwater, inside, cave, outside, etc.)
+NOTE: Battle events pass a parameter called "Terrain" which is a string with the terrain type ("none", "electric", "grassy", "misty", "psychic")
+
+ParamPath: A string representing a path in a map representation, beginning with a parameter name and then continuing with key names. It's in standard OOP notation.
+	e.g. To access the Power of a map passed in the parameter Attacker, you'd use "Attacker.Power".
+NOTE: In some specific cases, you may want to specify a constant string where a ParamPath can be used; for that, begin the string with "#" which will be stripped.
+	Just be careful you don't use constant strings where a real value is expected or you'll get errors.
+	e.g. When using the "contains" operation of a Condition, to see if a parameter contains a key called "Burned", you can set value2 to "#Burned".
+	e.g. When using the "=" operation of a Condition, to see if a parameter's value is the string "Samara", you can set value2 to "#Samara".
+
+Custom ParamPath: A ParamPath beginning with Custom will be able to set or access custom flags and values with no implied relation to parameters.
+	e.g. "Custom.someFlag" can be set to 1, and a condition later can check "Custom.someFlag" in any event or function.
+NOTE: The Condition operation "contains" can also look at custom flags, so you can check the existence of a flag like so:
+	{
+		"value1": "Custom",
+		"operation": "contains",
+		"value2": "#someFlag"
+	}
+
+Functions can usually take Values instead of real numbers (both are supported!):
+
+typedef Value {
+	"value": default 0 / real / ParamPath,
+	"multiplier": default 1 / real / ParamPath
+}
+
+Functions can often use Conditions as well to determine whether to apply or not:
+
+typedef Condition {
+	"value1": real / ParamPath,
+	"operation": "contains", "=", "<", ">", "<=", ">=",
+	"value2": real / ParamPath
+}
+
+ConditionList: An array of arrays of Conditions, representing CNF logic, like Minecraft advancements use. So top-level array is AND, inner arrays are OR.
+
+Parameters which are lists are actually maps with keys named "entry0", "entry1", etc., so string access is consistent.
+
+Function list:
+	"set": { "option": ParamPath, "to": Value, "conditions": ConditionList }
+		Sets the given ParamPath value to the given Value
+	"add": { "option": ParamPath, "add": Value, "conditions": ConditionList }
+		Adds the given Value to the given ParamPath (can be negative!)
+	"inflict": { "effect": String effect name, "on": ParamPath to a Pokemon map, "strength: Value, "conditions": ConditionList }
+		Inflicts the given status effect on the given Pokemon
+	"uninflict": { "effect": String effect name, "on": ParamPath to a Pokemon map, "conditions": ConditionList }
+		Removes the given status effect from the given Pokemon.
+	"foreach" { "list": ParamPath to a list, "function": Function, "conditions": ConditionList }
+		Applies the given function once per element in the given list; these inner functions can access the temporary parameter Iterator to get the current entry in addition to all parameters that
+		were passed to foreach.
+	"cancel": { "conditions": ConditionList, "message": default "" / String message to display in dialogue box }
+		Cancels internal code for the current event. Check the Event List for info about what canceling each event does. Setting the "message" to an empty string will show no message.
+
+Pokemon Maps contain "onField" boolean depending on if they're sent out in battle or not.
+
+The following properties are lists of event handlers:
+
+Pokemon#teammatehandlers: Handle events triggered by teammate Pokemon in battle.
+Pokemon#opponenthanders: Handle events triggered by opposing Pokemon in battle.
+Pokemon#attackhandlers: Handle events triggered by attacks in battle.
+Pokemon#battlehandlers: Handle global battle events while this 'mon is on the field.
+Pokemon#partyhandlers: Handle global battle events while this 'mon is in the party but not on the field.
+
+Item#baghandlers: Handle overworld events while this item is in the player's bag.
+Item#battlehandlers: Handle global battle events while this item is in the player's bag.
+Item#usehandler: Handle events triggered when this item is used.
+
+Event List:
+	Attack Cycle: Changes to the Move will apply on a per-target basis and be visible in all events for that target, but not for other targets or in other cycles/events. Canceling any event in this cycle
+			will cancel all events after it as well for the current target, but not for other targets (use Custom flags to get around that if you wish). "isHit" and "isTargeted" are dispatched to
+			the target 'mons, while the rest are dispatched to the attacker 'mon. All are also dispatched to the appropriate teammatehandlers and opponenthandlers.
+		"preattack": ("attacker" Pokemon map, "target" Pokemon map, "move" Move map incl. pp, etc.)
+			Dispatched to attackers attackhandlers when targets of a move are selected, but before the move is attempted. Triggers once per Pokemon targeted.
+			Cancelable: Yes; if canceled, the attacker will not attempt to attack the current target at all.
+		"isTargeted": ("attacker" Pokemon map, "target" Pokemon map, "move" Move map)
+			Dispatched to target's attackhandlers when targeted.
+			Cancelable: Yes; if canceled, the attacker will not attempt to attack this target at all.
+		"attack": ("attacker" Pokemon map, "target" Pokemon map, "move" Move map, "isCrit" boolean)
+			Dispatched to attacker's attackhandlers when a move lands. Triggers once per Pokemon it hits.
+			Cancelable: Yes; if canceled, no effects from the hit will apply to the current target.
+		"isHit": ("attacker" Pokemon map, "target" Pokemon map, "move" Move map, "isCrit" boolean)
+			Dispatched to target's attackhandlers when hit.
+			Cancelable: Yes; if canceled, no effects from the hit will apply to the current target.
+		"miss": ("attacker" Pokemon map, "target" Pokemon map, "move" Move map)
+			Dispatched to attacker's attackhandlers when a move misses. Triggers once per Pokemon it misses.
+			Cancelable: Yes; if canceled, no effects from missing this target will occur.
+		"postattack": ("attacker" Pokemon map, "target" Pokemon map, "move" Move map)
+			Dispatched to attacker's attackhandlers after a move completes, regardless of hit or miss. Triggers once per target.
+			Cancelable: Yes; if canceled, no post-attack effects for this target will occur.
+
+	In-Battle Pokemon Events: These are triggered for specific Pokemon during a battle, dispatched to that Pokemon, its moves, its abilities, and any "teammatehandlers" or "opponenthandlers",
+			as appropriate, of other 'mons on the field or in the party.
+		"enterfield": ("pokemon" Pokemon map, "team" List of Pokemon maps for player's team, "opponents" List of Pokemon maps for opponents' team, "isSwitchOut" boolean, "switchedWith" Pokemon map)
+			When the given Pokemon enters the battlefield. isSwitchOut is whether the Pokemon is being switched in or not (i.e. or sent in the first turn, or sent in from a fainting 'mon). "switchedWith" will
+				be the 'mon that is switching out or the 'mon that fainted, or will be empty if there is neither.
+			Cancelable: Yes if "isSwitchOut" is true, no otherwise. If canceled during a switch out, the original 'mon won't be withdrawn and the new 'mon won't enter the field.
+		"withdrawn": ("pokemon" Pokemon map, "team" List of Pokemon maps for player's team, "opponents" List of Pokemon maps for opponents' team)
+			When the given Pokemon is withdrawn.
+			Cancelable: Yes; if canceled, the 'mon is not withdrawn.
+		"faint": ("pokemon" Pokemon map, "team" List of Pokemon maps for player's team, "opponents" List of Pokemon maps for opponents' team)
+			When the given Pokemon faints.
+			Cancelable: Yes; if canceled, the 'mon's health will be clamped to at least 1 and it will not faint.
+		"caught": ("pokemon" Pokemon map, "ball" Ball map)
+			When a Pokemon is successfully caught.
+			Cancelable: Yes; if canceled, it will force the 'mon to break free of the ball and trigger the "breakfree" event.
+		"breakfree": ("pokemon" Pokemon map, "ball" Ball map)
+			When a Pokemon breaks free of a ball.
+			Cancelable: Yes; if canceled, it will force the 'mon to be caught and trigger the "caught" event.
+		"inflicted": ("pokemon" Pokemon map, "effect" String effect name, "team" List of Pokemon maps for player's team, "opponents" List of Pokemon maps for opponents' team, "source": String "item"/"move"/"ability")
+			When a Pokemon is inflicted with a status condition.
+			Cancelable: Yes; if canceled, the Pokemon is not inflicted with the condition.
+
+	In-Battle Global Events: These are triggered globally during a battle and dispatched to any "battlehandlers" on items in bag or 'mons on the field, and to any "partyhandlers" to 'mons in your party.
+		"turnstart": ("team" List of Pokemon maps for the player's team, "opponents" List of Pokemon maps for opponents' team, "turn" real turn number)
+			At the beginning of each turn in a battle.
+			Cancelable: No.
+		"turnend" ("team" List of Pokemon maps for the player's team, "opponents" List of Pokemon maps for opponents' team, "turn" real turn number)
+			At the end of each turn in a battle.
+			Cancelable: No.
+
+	In-Battle Item Events:
+		"useitemon": ("pokemon" Pokemon map, "team" List of Pokemon maps for player's team, "opponents" List of Pokemon maps for opponents' team, "turn" real turn number)
+			When an item is used on a Pokemon. Dispatched only to items' usehandlers.
+			Cancelable: Yes; if canceled, the item is not used.
+		"useitem": ("team" List of Pokemon maps for player's team, "opponents" List of Pokemon maps for opponents' team, "turn" real turn number)
+			When an item is used but not on a specific Pokemon. Dispatched only to items' usehandlers.
+			Cancelable: Yes; if canceled, the item is not used.
+
+	Overworld Events: These are dispatched outside of battle to any item "baghandlers" and any Pokemon or move "oobhandlers". They are also dispatched to the global Player "oobhandlers", in
+			which case they do not specify a "pokemon" parameter.
+		"step": ("party" List of Pokemon maps of player's party, "terrain": String terrain type like "grass", "water", "cave", etc.)
+			When the player takes a step.
+			Cancelable: No
+		"encounter": ("party" List of Pokemon maps of player's party, "terrain": String terrain type, "encounter" List of Pokemon maps of encountered 'mons)
+			When the player encounters a wild Pokemon.
+			Cancelable: Yes; if canceled, the encounter doesn't happen.
+		"interactobject": ("party" List of Pokemon maps of player's party, "object": A map containing a static object's data)
+			When the player interacts with a static object (rock wall, smash rock, cut tree, sign, etc.)
+			Cancelable: Yes; if canceled, the interaction has no effect.
+		"ineractnpc": ("party" List of Pokemon maps of player's party, "object": A map containing an NPC's data)
+			When the player interacts with an NPC.
+			Cancelable: Yes; if canceled, the interaction has no effect.
+		"usefieldmove": ("party" List of Pokemon maps of player's party, "facing" String terrain type, "terrain" String terrain type, "move" Move map)
+			When a field move is used. This is dispatched to moves only if they are the field move being used; it's dispatched to Abilities and Pokemon whenever any field move is used.
+			Cancelable: Yes; if canceled, the field move has no effect.
+		"battle": ("party" List of Pokemon maps of player's party, "terrain" String terrain type, "opponent" Map of the opponent)
+			When a battle is triggered.
+			Cancelable: Yes; if canceled, the battle does not trigger.
+
+	Overworld Item Events:
+		"useitemoverworld": ("party" List of Pokemon maps of player's party, "facing" String terrain type, "terrain" String terrain type)
+			Dispatched to items' "usehandlers" when an item is used in the overworld on no particular 'mon.
+			Cancelable: Yes; if canceled, the item is not used.
+		"useitemparty": ("pokemon" Pokemon map, "party" List of Pokemon maps of player's party, "terrain" Strin terrain type)
+			Dispatched to items' "usehandlers" when an item is used on a Pokemon in the party outside of battle.
+			Cancelable: Yes; if canceled, the item is not used.
