@@ -12,6 +12,12 @@ NOTE: In some specific cases, you may want to specify a constant string where a 
 	e.g. When using the "contains" operation of a Condition, to see if a parameter contains a key called "Burned", you can set value2 to "#Burned".
 	e.g. When using the "=" operation of a Condition, to see if a parameter's value is the string "Samara", you can set value2 to "#Samara".
 
+Random ParamPath: A ParamPath beginning with "Random" will generate a random integer and use that value. You can specify the min and max like so:
+		"Random.min4.max20" will generate a random number between 4 and 20, inclusive.
+		"Random.min5" will generate a random number between 5 and 100, inclusive.
+		"Random.max390" will generate a random number between 0 and 390, inclusive.
+		"Random" will generate a random number between 0 and 100, inclusive.
+
 Custom ParamPath: A ParamPath beginning with Custom will be able to set or access custom flags and values with no implied relation to parameters.
 	e.g. "Custom.someFlag" can be set to 1, and a condition later can check "Custom.someFlag" in any event or function.
 NOTE: The Condition operation "contains" can also look at custom flags, so you can check the existence of a flag like so:

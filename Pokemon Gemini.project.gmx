@@ -97,6 +97,7 @@
       <script>scripts\EVS_AND_IVS.gml</script>
       <script>scripts\BATTLE_CALCS.gml</script>
       <script>scripts\FAKEMON_IDEAS.gml</script>
+      <script>scripts\CAPTURE_CALCS.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
