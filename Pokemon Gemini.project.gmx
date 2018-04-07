@@ -3,31 +3,14 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="2" name="datafiles">
-    <datafile>
-      <name>pokemon_bw.ttf</name>
-      <exists>-1</exists>
-      <size>12584</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>pokemon_bw.ttf</filename>
-    </datafile>
-  </datafiles>
+  <datafiles number="2" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound">
     <sounds name="BGM">
       <sounds name="Cutscenes">
         <sound>sound\BGMIntroRich</sound>
         <sound>sound\BGMIntroPoor</sound>
+        <sound>sound\BGMIntro</sound>
       </sounds>
     </sounds>
     <sounds name="SFX">
@@ -51,6 +34,9 @@
       <sprites name="Pokemon">
         <sprite>sprites\SprNagonFront</sprite>
       </sprites>
+    </sprites>
+    <sprites name="Fonts">
+      <sprite>sprites\SprFontDialog</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -100,6 +86,9 @@
       <script>scripts\CAPTURE_CALCS.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\FontDialog</font>
+  </fonts>
   <objects name="objects">
     <objects name="GUI">
       <object>objects\BattleMenu</object>
@@ -123,6 +112,7 @@
   <rooms name="rooms">
     <room>rooms\RoomInit</room>
     <room>rooms\RoomDemo</room>
+    <room>rooms\RoomIntro</room>
   </rooms>
   <constants number="4">
     <constant name="VER_CASTOR">0</constant>

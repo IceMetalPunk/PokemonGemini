@@ -133,6 +133,8 @@ if (tile != -1) {
             <string>// Drop-down stage of region name animation
 if (animationStage == 0) {
     animationOffset += 2;
+
+    draw_set_font(global.OPTION_FONT);    
     draw_set_color(c_white);
     draw_rectangle(0, -20 + animationOffset - 2, 10 + string_width(regionName), -20 + animationOffset + string_height(regionName) + 2, 0);
     draw_set_color(c_black);
@@ -141,11 +143,13 @@ if (animationStage == 0) {
         animationOffset = 0;
         animationStage = 1;
     }
-    
+    draw_set_font(-1);
 }
 // Delay stage of region name animation
 else if (animationStage == 1) {
     ++animationOffset;
+    
+    draw_set_font(global.OPTION_FONT);
     draw_set_color(c_white);
     draw_rectangle(0, 0, 10 + string_width(regionName), 4 + string_height(regionName), 0);
     draw_set_color(c_black);
@@ -154,10 +158,13 @@ else if (animationStage == 1) {
         animationOffset = 0;
         animationStage = 2;
     }
+    draw_set_font(-1);
 }
 // Fade-out stage of region name animation
 else if (animationStage == 2) {
     animationOffset += 0.05;
+    
+    draw_set_font(global.OPTION_FONT);
     var oalpha = draw_get_alpha();
     draw_set_alpha(1 - animationOffset);
     
@@ -172,6 +179,7 @@ else if (animationStage == 2) {
         animationStage = -1;
         animationOffset = 0;
     }
+    draw_set_font(-1);
     
 }
 </string>

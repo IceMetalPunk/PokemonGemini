@@ -4,11 +4,11 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="7" enumb="5">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,7 +25,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>call_method(BattleMenu, "addMessage", "Welcome to the wonderful world of "+TXT_POKEMON+"!");
+            <string>call_method(SoundManager, "stopSound", BGMIntro);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>call_method(BattleMenu, "addMessage", "Welcome to the wonderful world of "+TXT_POKEMON+"! Playing this will cost you $46 you know!");
 call_method(BattleMenu, "addMessage", "Living on the island of "+global.islandNames[global.VERSION]+", you may not know much about the Gemini region, so I'm here to teach you a bit of your own history!");
 call_method(BattleMenu, "addMessage", "My name is Professor Hawthorne, from "+global.islandNames[!global.VERSION]+" Island, and I've devoted my life to studying the economic influences that "+TXT_POKEMON+" have had here in Gemini. If you have any questions on your journey, feel free to ask!");
 call_method(BattleMenu, "addMessage", "The world can be a scary place when you're unfamiliar with your surroundings, but as long as you have a "+TXT_POKEMON+" by your side, you have nothing to worry about!");
@@ -38,6 +61,8 @@ call_method(BattleMenu, "addMenuOption", "Fight", 1);
 call_method(BattleMenu, "addMenuOption", TXT_POKEMON, 2);
 call_method(BattleMenu, "addMenuOption", "Item", 3);
 /**/
+
+call_method(SoundManager, "playMusic", BGMIntro);
 
 cutscene_scale = 0;
 fadeout = 0;
@@ -63,9 +88,7 @@ fadeout = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>exit;
-
-draw_sprite(SprGameLogo, global.VERSION, 0, 0);
+            <string>draw_sprite(SprGameLogo, global.VERSION, 0, 0);
 draw_sprite(SprProfessor, 0, room_width/2, room_height-128-sprite_get_height(SprProfessor)-10);
 
 if (ds_queue_size(BattleMenu.messages)&lt;=1 || (ds_queue_size(BattleMenu.messages)==2 &amp;&amp; BattleMenu.message_pos&gt;=string_length(BattleMenu.message)/2)) {
