@@ -25,9 +25,16 @@ Damage:
 
 Targets = 0.75 + (0.25 * (targets.length == 1));
 Weather = 1 + 0.5 * (weather_boosts_type - weather_weakens_type);
-Crit = 1 + 0.5 * isCrit;
+Crit = 1 + isCrit;
 
---> isCrit = irandom(255) < pokemon.speed/2 * (1 + 7 * isHighCritMove)
+    critStage = 0;
+    if (move.isHighCrit) { critStage += 1; } // Maybe want to make this more flexible, with a "critModifier" property of the moves themselves that gets added?
+    if (heldItem.name == "Razor Claw" || heldItem.name == "Scope Lens") { critStage += 1; }
+    else if ((heldItem.name == "Stick" && pokemon.name == "Farfetch'd") || (heldItem.name == "Lucky Punch" && pokemon.name == "Chansey")) { critStage += 2; }
+    if (pokemon.ability.name == "Super Luck") { critStage += 1; }
+    if (pokemon.usedMoves.includes("Focus Energy") || pokemon.usedItems.includes("Dire Hit") || pokemon.usedItem.includes("Lansat Berry")) { critStage += 2; }
+    critStage = median(0, critStage, 4);
+    isCrit = (irandom_range(1, round(16 / max(1, 2 * critStage))) == 1);
 
 Rand = random(0.85, 1.0)
 STAB = 1 + ((0.5 + (pokemon.ability == Adaptability)) * (move.type == pokemon.type));
@@ -41,6 +48,6 @@ cAttack = pokemon.Attack * isPhysical + pokemon.spAttack * isSpecial
 cDefense = enemy.Defense * isPhysical + enemy.spDefense * isSpecial
 if Power < 0, Damage = 0; else
     Damage = Modifier * (2 + (0.02 * Power * (cAttack / cDefense) * (2 + 0.2 * 2 * Level)))
-    Damage = max(1, floor(Damage))
+    if (!isImmuneToType) { Damage = max(1, floor(Damage)); }
 
 */
