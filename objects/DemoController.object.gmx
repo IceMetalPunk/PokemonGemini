@@ -50,7 +50,7 @@
             <kind>1</kind>
             <string>call_method(BattleMenu, "addMessage", "Welcome to the wonderful world of "+TXT_POKEMON+"! Playing this will cost you $46 you know!");
 call_method(BattleMenu, "addMessage", "Living on the island of "+global.islandNames[global.VERSION]+", you may not know much about the Gemini region, so I'm here to teach you a bit of your own history!");
-call_method(BattleMenu, "addMessage", "My name is Professor Hawthorne, from "+global.islandNames[!global.VERSION]+" Island, and I've devoted my life to studying the economic influences that "+TXT_POKEMON+" have had here in Gemini. If you have any questions on your journey, feel free to ask!");
+call_method(BattleMenu, "addMessage", "My name is Professor Hawthorn, from "+global.islandNames[!global.VERSION]+" Island, and I've devoted my life to studying the economic influences that "+TXT_POKEMON+" have had here in Gemini. If you have any questions on your journey, feel free to ask!");
 call_method(BattleMenu, "addMessage", "The world can be a scary place when you're unfamiliar with your surroundings, but as long as you have a "+TXT_POKEMON+" by your side, you have nothing to worry about!");
 call_method(BattleMenu, "addMessage", "As you already know, any trainers who can complete their Proof of Aptitude will earn a home on "+global.islandNames[!global.VERSION]+" Island, so the journey you're about to begin is quite important!");
 call_method(BattleMenu, "addMessage", "So, let's get you prepared for it! I'm sure you're skittish as a Skitty and eager to begin your Proof!");
