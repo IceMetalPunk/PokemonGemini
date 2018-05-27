@@ -26,6 +26,7 @@ Signature ability: Reaper - If another 'mon is KO'd and you have this non-fainte
                     in your party, you may choose to have the other 'mon regain full HP
                     and this 'mon will faint instead. ("Grimmwar's Reaper activated! Revive %dyingMon%?")
 Can only be found as event Pokemon, but there's one in each graveyard in Gemini.
+They learn Healing Wish at some point via levelup. (Healing Wish = instant faint, replace w/ new 'mon who gets fully healed; can't replace w/ fainted 'mon)
 
 NEW ZEALAND BASED 'MONS:
 

@@ -38,6 +38,16 @@
     <sprites name="Fonts">
       <sprite>sprites\SprFontDialog</sprite>
     </sprites>
+    <sprites name="Overworld">
+      <sprites name="Characters">
+        <sprites name="Trainers">
+          <sprite>sprites\SprPlayerDown</sprite>
+          <sprite>sprites\SprPlayerRight</sprite>
+          <sprite>sprites\SprPlayerLeft</sprite>
+          <sprite>sprites\SprPlayerUp</sprite>
+        </sprites>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\RegionTiles</background>
@@ -107,6 +117,13 @@
     <objects name="Managers">
       <object>objects\SoundManager</object>
       <object>objects\RegionManager</object>
+    </objects>
+    <objects name="Overworld">
+      <objects name="Characters">
+        <objects name="Trainers">
+          <object>objects\Player</object>
+        </objects>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

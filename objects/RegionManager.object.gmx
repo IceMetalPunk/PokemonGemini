@@ -67,7 +67,8 @@ animationOffset = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var xx = mouse_x, yy = mouse_y;
+            <string>//var xx = mouse_x, yy = mouse_y;
+var xx = Player.x, yy = Player.y;
 
 var tile = tile_layer_find(1000000, xx, yy);
 if (tile != -1) {
