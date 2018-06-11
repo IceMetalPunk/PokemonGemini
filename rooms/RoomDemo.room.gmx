@@ -132,6 +132,52 @@ for (var index = 0; index &lt; 10; ++index) {
     <tile bgName="RegionTiles" x="80" y="176" w="16" h="16" xo="48" yo="0" id="10000093" name="inst_115881E6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="RegionTiles" x="96" y="176" w="16" h="16" xo="48" yo="0" id="10000094" name="inst_8467A9FF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="RegionTiles" x="144" y="224" w="16" h="16" xo="48" yo="0" id="10000095" name="inst_69BCA573" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="48" y="176" w="16" h="16" xo="240" yo="0" id="10000114" name="inst_80A0BC07" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="48" y="192" w="16" h="16" xo="240" yo="0" id="10000115" name="inst_01D72122" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="48" y="208" w="16" h="16" xo="240" yo="0" id="10000116" name="inst_6D689157" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="64" y="208" w="16" h="16" xo="240" yo="0" id="10000117" name="inst_AFDC8D83" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="64" y="224" w="16" h="16" xo="240" yo="0" id="10000118" name="inst_7168E791" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="64" y="240" w="16" h="16" xo="240" yo="0" id="10000119" name="inst_E20B01B1" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="80" y="240" w="16" h="16" xo="240" yo="0" id="10000120" name="inst_38BFADA2" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="96" y="240" w="16" h="16" xo="240" yo="0" id="10000121" name="inst_616E2E19" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="112" y="240" w="16" h="16" xo="240" yo="0" id="10000122" name="inst_384BE491" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="112" y="256" w="16" h="16" xo="240" yo="0" id="10000123" name="inst_9434F6F6" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="128" y="256" w="16" h="16" xo="240" yo="0" id="10000124" name="inst_A5D4E3A1" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="144" y="256" w="16" h="16" xo="240" yo="0" id="10000125" name="inst_D5C6A42D" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="160" y="256" w="16" h="16" xo="240" yo="0" id="10000126" name="inst_02AE4953" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="176" y="256" w="16" h="16" xo="240" yo="0" id="10000127" name="inst_A5B769DF" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="192" y="256" w="16" h="16" xo="240" yo="0" id="10000128" name="inst_D8D7DC36" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="208" y="256" w="16" h="16" xo="240" yo="0" id="10000129" name="inst_553BA559" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="208" y="240" w="16" h="16" xo="240" yo="0" id="10000130" name="inst_B1E3680B" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="208" y="224" w="16" h="16" xo="240" yo="0" id="10000131" name="inst_D6E81E98" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="208" y="208" w="16" h="16" xo="240" yo="0" id="10000132" name="inst_85D3B41C" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="208" y="192" w="16" h="16" xo="240" yo="0" id="10000133" name="inst_96D35D22" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="208" y="176" w="16" h="16" xo="240" yo="0" id="10000134" name="inst_99C6BB55" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="64" y="176" w="16" h="16" xo="240" yo="0" id="10000135" name="inst_0769A859" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="80" y="176" w="16" h="16" xo="240" yo="0" id="10000136" name="inst_E3121DD7" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="96" y="176" w="16" h="16" xo="240" yo="0" id="10000137" name="inst_1E3A00E4" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="192" y="176" w="16" h="16" xo="240" yo="0" id="10000138" name="inst_9410B663" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="176" y="160" w="16" h="16" xo="240" yo="0" id="10000139" name="inst_8D173E3C" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="176" y="176" w="16" h="16" xo="240" yo="0" id="10000140" name="inst_8248B41A" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="176" y="144" w="16" h="16" xo="240" yo="0" id="10000141" name="inst_4F0F902B" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="176" y="128" w="16" h="16" xo="240" yo="0" id="10000142" name="inst_681265E0" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="176" y="112" w="16" h="16" xo="240" yo="0" id="10000143" name="inst_86875DFB" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="176" y="96" w="16" h="16" xo="240" yo="0" id="10000144" name="inst_8EF1B200" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="176" y="80" w="16" h="16" xo="240" yo="0" id="10000145" name="inst_797BE38E" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="176" y="64" w="16" h="16" xo="240" yo="0" id="10000146" name="inst_7E2E2D24" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="160" y="64" w="16" h="16" xo="240" yo="0" id="10000147" name="inst_9F62A241" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="144" y="64" w="16" h="16" xo="240" yo="0" id="10000148" name="inst_789CC7F9" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="128" y="64" w="16" h="16" xo="240" yo="0" id="10000149" name="inst_AC8F38E2" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="112" y="64" w="16" h="16" xo="240" yo="0" id="10000150" name="inst_320CCBB1" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="96" y="64" w="16" h="16" xo="240" yo="0" id="10000151" name="inst_2183987B" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="80" y="80" w="16" h="16" xo="240" yo="0" id="10000152" name="inst_2E16391E" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="80" y="96" w="16" h="16" xo="240" yo="0" id="10000153" name="inst_16CF7A79" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="80" y="112" w="16" h="16" xo="240" yo="0" id="10000154" name="inst_002F9EA7" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="80" y="128" w="16" h="16" xo="240" yo="0" id="10000155" name="inst_6FBC4272" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="96" y="144" w="16" h="16" xo="240" yo="0" id="10000156" name="inst_CA81435E" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="112" y="160" w="16" h="16" xo="240" yo="0" id="10000157" name="inst_27D6CD73" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="112" y="176" w="16" h="16" xo="240" yo="0" id="10000158" name="inst_4BA8E691" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="CollisionTiles" x="144" y="192" w="16" h="16" xo="16" yo="0" id="10000163" name="inst_15B299AD" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

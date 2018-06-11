@@ -51,6 +51,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\RegionTiles</background>
+    <background>background\CollisionTiles</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -94,6 +95,10 @@
       <script>scripts\BATTLE_CALCS.gml</script>
       <script>scripts\FAKEMON_IDEAS.gml</script>
       <script>scripts\CAPTURE_CALCS.gml</script>
+      <script>scripts\ECONOMIC_INFLUENCES.gml</script>
+    </scripts>
+    <scripts name="Overworld">
+      <script>scripts\side_solid.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -131,11 +136,15 @@
     <room>rooms\RoomDemo</room>
     <room>rooms\RoomIntro</room>
   </rooms>
-  <constants number="4">
+  <constants number="8">
     <constant name="VER_CASTOR">0</constant>
     <constant name="VER_POLLUX">1</constant>
     <constant name="TXT_POKEMON">"Pokémon"</constant>
     <constant name="MENU_X">((2 * room_width) / 3)</constant>
+    <constant name="MASK_TOP">1</constant>
+    <constant name="MASK_RIGHT">2</constant>
+    <constant name="MASK_BOTTOM">4</constant>
+    <constant name="MASK_LEFT">8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

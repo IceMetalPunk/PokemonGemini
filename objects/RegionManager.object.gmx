@@ -109,6 +109,7 @@ if (tile != -1) {
           <argument>
             <kind>1</kind>
             <string>tile_layer_hide(1000000);
+tile_layer_hide(999999);
 </string>
           </argument>
         </arguments>

@@ -78,35 +78,47 @@ if (x == goToX &amp;&amp; y == goToY) {
         runningModifier = 1;
     }
 
+    // Sprite setting
     if (keyboard_check(vk_left)) {
-        goToX -= 16;
+        sprite_index = SprPlayerLeft;
     }
     else if (keyboard_check(vk_right)) {
-        goToX += 16;
+        sprite_index = SprPlayerRight;
     }
     else if (keyboard_check(vk_up)) {
-        goToY -= 16;
+        sprite_index = SprPlayerUp;
     }
     else if (keyboard_check(vk_down)) {
+        sprite_index = SprPlayerDown;
+    }
+    
+    // Actual movement goal setting
+    if (keyboard_check(vk_left) &amp;&amp; !side_solid(goToX - 16, goToY, MASK_RIGHT)) {
+        goToX -= 16;
+    }
+    else if (keyboard_check(vk_right) &amp;&amp; !side_solid(goToX + 16, goToY, MASK_LEFT)) {
+        goToX += 16;
+    }
+    else if (keyboard_check(vk_up) &amp;&amp; !side_solid(goToX, goToY - 16, MASK_BOTTOM)) {
+        goToY -= 16;
+    }
+    else if (keyboard_check(vk_down) &amp;&amp; !side_solid(goToX, goToY + 16, MASK_TOP)) {
         goToY += 16;
     }
     else {
         image_index = 0;
         image_speed = 0;
     }
+    
 }
 else if (x != goToX) {
     var dir = sign(goToX - x);
-    if (dir &gt; 0) { sprite_index = SprPlayerRight; }
-    else if (dir &lt; 0) { sprite_index = SprPlayerLeft; }
     
     x += runningModifier * spd * dir;
     image_speed = 0.2;
 }
 else if (y != goToY) {
     var dir = sign(goToY - y);
-    if (dir &gt; 0) { sprite_index = SprPlayerDown; }
-    else if (dir &lt; 0) { sprite_index = SprPlayerUp; }
     
     y += runningModifier * spd * dir;
     image_speed = 0.2;
