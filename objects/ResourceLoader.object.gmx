@@ -50,6 +50,7 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>init_fonts();
+init_data();
 // ...load other resources...
 
 alarm[0]=1;

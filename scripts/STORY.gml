@@ -20,12 +20,12 @@ The first half of the game takes place mostly on Poor Island, as you work your w
 Points" (gyms). It's mostly focused on that story--beating the gyms and proving yourself for your mom--but every once
 in awhile, there are hints of corruption in Gemini's government. But you're just a kid, so you can't get involved.
 
-At the end of the first half, you travel to Rich Island to take on four of the Gemini Greats ("elite four"), ending in
-a battle with the Twins (a double-battle version of the champion battle). If you win, you and your family can move to
+At the end of the first half, you travel to Rich Island to take on four of the Gemini Greats ("elite four"). If you win, you and your family can move to
 Rich Island, your mom gets her treatment, and you become a Gemini Great. Everything is good.
 
-Then the second half of the game begins, ten years later. You're an adult now, your mother is elderly, and as a Great,
-you're living a life of luxury. But things aren't as they seem; you've been suspicious of the Gemini government for
+Then the second half of the game begins, ten years later. You're an adult now, your mother is elderly (but alive), and as a Great,
+you're living a life of luxury. You decide to take on the Twins (i.e. double-battle "champion") to prove your skills. You win and become the new face of
+Rich Island & the Proof challenge, but things aren't as they seem; you've been suspicious of the Gemini government for
 a little while now, and those hints from Part 1 of corruption come back to haunt you. You discover that the Gemini
 government has been fixing the Proof Point battles, letting political allies into Rich Island and forcing out those
 it deems "unworthy" or "untouchable" (a travel ban!). This has resulted in the deaths of hundreds of people who died
@@ -51,5 +51,6 @@ STORY NOTES:
     the Mysterious Orb, it'll "hatch" the orb (really an egg) into the pre-evo of them, Ilusi, whose gender is the opposite of the 'mon that
     hatched it. A male Ilusi will evolve into Prestid, and a female Ilusi will evolve into Ijitay; this gives you a way to get both legends in
     both games, if you explored enough to get the Mysterious Orb in the first place.
+- Children on Rich Island must complete their Proof at age 18 to prove they're worthy of staying; otherwise they are exiled to Poor Island.
 
 */

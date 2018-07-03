@@ -3,7 +3,7 @@
 
 When capturing a Pokemon, first calculate the modified catch rate:
 
-modRate = (3 * maxHP - 2 * currentHP) * catchRate * ballBonus * statusBonus / 3 * maxHP
+modRate = (3 * maxHP - 2 * currentHP) * catchRate * ballBonus * statusBonus / (3 * maxHP)
 
 Where statusBonus = {
     2.5 if sleeping | frozen,

@@ -3,7 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="2" name="datafiles"/>
+  <datafiles number="4" name="datafiles">
+    <datafile>
+      <name>Data.zip</name>
+      <exists>-1</exists>
+      <size>474</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Data.zip</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound">
     <sounds name="BGM">
@@ -57,6 +75,7 @@
   <scripts name="scripts">
     <scripts name="Init">
       <script>scripts\init_fonts.gml</script>
+      <script>scripts\init_data.gml</script>
     </scripts>
     <scripts name="Helpers">
       <script>scripts\call_method.gml</script>
@@ -99,6 +118,9 @@
     </scripts>
     <scripts name="Overworld">
       <script>scripts\side_solid.gml</script>
+    </scripts>
+    <scripts name="Regions">
+      <script>scripts\load_regions.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

@@ -41,7 +41,7 @@
             <kind>1</kind>
             <string>currentRegion = undefined;
 regionName = "";
-wildBattles = undefined;
+grassBattles = undefined;
 
 animationStage = -1;
 animationOffset = 0;
@@ -75,11 +75,15 @@ if (tile != -1) {
     var regionID = tile_get_left(tile);
     regionID = (regionID div 16);
     
-    var region = global.regionMap[? regionID];
+    if (ds_list_size(global.regionMap) &lt;= regionID) {
+        show_error("Tried to load region " + string(regionID) + " but there are not enough regions in room " + room_get_name(room), true);
+    }
+    
+    var region = global.regionMap[| regionID];
     
     if (!is_undefined(region) &amp;&amp; region != currentRegion) {
         regionName = region[? "name"];
-        wildBattles = region[? "wildBattles"];
+        grassBattles = region[? "grassBattles"];
         currentRegion = region;
         animationStage = 0;
         animationOffset = 0;
@@ -108,7 +112,11 @@ if (tile != -1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>tile_layer_hide(1000000);
+            <string>// Load region data
+var regionDataLoaded = load_regions();
+
+// Hide functional tiles
+tile_layer_hide(1000000);
 tile_layer_hide(999999);
 </string>
           </argument>

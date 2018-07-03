@@ -101,37 +101,37 @@ for (var index = 0; index &lt; 10; ++index) {
     <tile bgName="RegionTiles" x="128" y="64" w="16" h="16" xo="0" yo="0" id="10000062" name="inst_FDB5D7FF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="RegionTiles" x="112" y="64" w="16" h="16" xo="0" yo="0" id="10000063" name="inst_18DD2A84" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="RegionTiles" x="96" y="64" w="16" h="16" xo="0" yo="0" id="10000064" name="inst_C8FD8CF3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="112" y="176" w="16" h="16" xo="48" yo="0" id="10000065" name="inst_D20B9DE3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="128" y="176" w="16" h="16" xo="48" yo="0" id="10000066" name="inst_22DB4F90" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="144" y="176" w="16" h="16" xo="48" yo="0" id="10000067" name="inst_D46DC091" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="160" y="176" w="16" h="16" xo="48" yo="0" id="10000068" name="inst_C79E9295" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="176" y="176" w="16" h="16" xo="48" yo="0" id="10000069" name="inst_75182515" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="192" y="176" w="16" h="16" xo="48" yo="0" id="10000070" name="inst_BECCB63D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="208" y="176" w="16" h="16" xo="48" yo="0" id="10000071" name="inst_23BF806A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="208" y="192" w="16" h="16" xo="48" yo="0" id="10000072" name="inst_CB701033" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="208" y="208" w="16" h="16" xo="48" yo="0" id="10000073" name="inst_A1AF6765" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="208" y="224" w="16" h="16" xo="48" yo="0" id="10000074" name="inst_5B523C91" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="208" y="240" w="16" h="16" xo="48" yo="0" id="10000075" name="inst_782EA9D9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="208" y="256" w="16" h="16" xo="48" yo="0" id="10000076" name="inst_C4D774F7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="192" y="256" w="16" h="16" xo="48" yo="0" id="10000077" name="inst_712CC2C5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="176" y="256" w="16" h="16" xo="48" yo="0" id="10000078" name="inst_0161C4A1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="160" y="256" w="16" h="16" xo="48" yo="0" id="10000079" name="inst_1A7E04A6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="144" y="256" w="16" h="16" xo="48" yo="0" id="10000080" name="inst_FDBD1044" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="128" y="256" w="16" h="16" xo="48" yo="0" id="10000081" name="inst_1D8B1702" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="112" y="256" w="16" h="16" xo="48" yo="0" id="10000082" name="inst_0D1E26BD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="112" y="240" w="16" h="16" xo="48" yo="0" id="10000083" name="inst_162B1082" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="96" y="240" w="16" h="16" xo="48" yo="0" id="10000084" name="inst_0EB616D4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="80" y="240" w="16" h="16" xo="48" yo="0" id="10000085" name="inst_441512DE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="64" y="240" w="16" h="16" xo="48" yo="0" id="10000086" name="inst_831813E2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="64" y="224" w="16" h="16" xo="48" yo="0" id="10000087" name="inst_5EACB79E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="64" y="208" w="16" h="16" xo="48" yo="0" id="10000088" name="inst_8803666C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="48" y="208" w="16" h="16" xo="48" yo="0" id="10000089" name="inst_447F4302" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="48" y="192" w="16" h="16" xo="48" yo="0" id="10000090" name="inst_80C7D380" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="48" y="176" w="16" h="16" xo="48" yo="0" id="10000091" name="inst_F5B8CF22" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="64" y="176" w="16" h="16" xo="48" yo="0" id="10000092" name="inst_5083D336" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="80" y="176" w="16" h="16" xo="48" yo="0" id="10000093" name="inst_115881E6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="96" y="176" w="16" h="16" xo="48" yo="0" id="10000094" name="inst_8467A9FF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="RegionTiles" x="144" y="224" w="16" h="16" xo="48" yo="0" id="10000095" name="inst_69BCA573" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="128" y="176" w="16" h="16" xo="16" yo="0" id="10000164" name="inst_FE263D8E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="144" y="176" w="16" h="16" xo="16" yo="0" id="10000165" name="inst_9CC873CD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="160" y="176" w="16" h="16" xo="16" yo="0" id="10000166" name="inst_93ACEA55" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="176" y="176" w="16" h="16" xo="16" yo="0" id="10000167" name="inst_0527B9F8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="192" y="176" w="16" h="16" xo="16" yo="0" id="10000168" name="inst_2E9A1300" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="208" y="176" w="16" h="16" xo="16" yo="0" id="10000169" name="inst_43A18B2C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="208" y="192" w="16" h="16" xo="16" yo="0" id="10000170" name="inst_6627C17C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="208" y="208" w="16" h="16" xo="16" yo="0" id="10000171" name="inst_EE4974D4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="208" y="224" w="16" h="16" xo="16" yo="0" id="10000172" name="inst_152A834A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="208" y="240" w="16" h="16" xo="16" yo="0" id="10000173" name="inst_2B1A1B7A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="208" y="256" w="16" h="16" xo="16" yo="0" id="10000174" name="inst_B492213A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="192" y="256" w="16" h="16" xo="16" yo="0" id="10000175" name="inst_9D8C30C3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="176" y="256" w="16" h="16" xo="16" yo="0" id="10000176" name="inst_68530B71" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="160" y="256" w="16" h="16" xo="16" yo="0" id="10000177" name="inst_CA45F075" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="144" y="256" w="16" h="16" xo="16" yo="0" id="10000178" name="inst_36E7E35F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="128" y="256" w="16" h="16" xo="16" yo="0" id="10000179" name="inst_E947A105" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="112" y="256" w="16" h="16" xo="16" yo="0" id="10000180" name="inst_E6E5C3F3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="112" y="240" w="16" h="16" xo="16" yo="0" id="10000181" name="inst_5C905B68" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="96" y="240" w="16" h="16" xo="16" yo="0" id="10000182" name="inst_D450D86B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="80" y="240" w="16" h="16" xo="16" yo="0" id="10000183" name="inst_68211DB7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="64" y="240" w="16" h="16" xo="16" yo="0" id="10000184" name="inst_DEFCDACA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="64" y="224" w="16" h="16" xo="16" yo="0" id="10000185" name="inst_D1B966F3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="64" y="208" w="16" h="16" xo="16" yo="0" id="10000186" name="inst_95BAAF25" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="48" y="208" w="16" h="16" xo="16" yo="0" id="10000187" name="inst_6402204B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="48" y="192" w="16" h="16" xo="16" yo="0" id="10000188" name="inst_607C2C63" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="48" y="176" w="16" h="16" xo="16" yo="0" id="10000189" name="inst_829DC332" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="64" y="176" w="16" h="16" xo="16" yo="0" id="10000190" name="inst_16A601B6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="80" y="176" w="16" h="16" xo="16" yo="0" id="10000191" name="inst_3B088819" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="96" y="176" w="16" h="16" xo="16" yo="0" id="10000192" name="inst_20D3FB85" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="112" y="176" w="16" h="16" xo="16" yo="0" id="10000193" name="inst_3061DF02" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="RegionTiles" x="144" y="224" w="16" h="16" xo="16" yo="0" id="10000194" name="inst_9296D578" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="CollisionTiles" x="48" y="176" w="16" h="16" xo="240" yo="0" id="10000114" name="inst_80A0BC07" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="CollisionTiles" x="48" y="192" w="16" h="16" xo="240" yo="0" id="10000115" name="inst_01D72122" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="CollisionTiles" x="48" y="208" w="16" h="16" xo="240" yo="0" id="10000116" name="inst_6D689157" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
