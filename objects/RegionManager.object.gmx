@@ -67,7 +67,10 @@ animationOffset = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//var xx = mouse_x, yy = mouse_y;
+            <string>if (!instance_exists(Player)) {
+    exit;
+}
+
 var xx = Player.x, yy = Player.y;
 
 var tile = tile_layer_find(1000000, xx, yy);
@@ -140,7 +143,12 @@ tile_layer_hide(999999);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Drop-down stage of region name animation
+            <string>// Assume no player = not overworld and cancel all drawing of region names.
+if (!instance_exists(Player)) {
+    exit;
+}
+
+// Drop-down stage of region name animation
 if (animationStage == 0) {
     animationOffset += 2;
 
