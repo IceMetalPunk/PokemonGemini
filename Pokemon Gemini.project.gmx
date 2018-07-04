@@ -115,6 +115,7 @@
       <script>scripts\FAKEMON_IDEAS.gml</script>
       <script>scripts\CAPTURE_CALCS.gml</script>
       <script>scripts\ECONOMIC_INFLUENCES.gml</script>
+      <script>scripts\SPECIAL_OPTIONS_AND_MODES.gml</script>
     </scripts>
     <scripts name="Overworld">
       <script>scripts\side_solid.gml</script>
