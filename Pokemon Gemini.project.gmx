@@ -81,12 +81,12 @@
     <scripts name="Helpers">
       <script>scripts\call_method.gml</script>
       <script>scripts\text_speed_to_real.gml</script>
+      <script>scripts\array.gml</script>
       <scripts name="Sorting">
         <script>scripts\quicksort_custom.gml</script>
         <script>scripts\basic_comparator.gml</script>
         <script>scripts\sortByWeight.gml</script>
       </scripts>
-      <script>scripts\array.gml</script>
     </scripts>
     <scripts name="GUI">
       <script>scripts\gui_draw_battle_menu.gml</script>

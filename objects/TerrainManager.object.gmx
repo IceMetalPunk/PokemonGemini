@@ -66,7 +66,7 @@ methods[? "getEncounter"] = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// getEncounter
+            <string>/// getEncounter()
 if (is_undefined(RegionManager.encounters)) {
     returnValue = undefined;
     exit;
@@ -77,8 +77,7 @@ var type = returnValue;
 
 if (ds_map_exists(RegionManager.encounters, type)) {
     var encounterList = RegionManager.encounters[? type];
-// FIXME: Quicksort crashes saying iterator "j" is not a number?
-//    quicksort_custom(encounterList, 0, ds_list_size(encounterList)-1, "sortByWeight");
+    quicksort_custom(encounterList, 0, ds_list_size(encounterList)-1, sortByWeight);
     
     var sum = 0, encounter;
     for (var i = 0; i &lt; ds_list_size(encounterList); ++i) {
@@ -90,7 +89,6 @@ if (ds_map_exists(RegionManager.encounters, type)) {
         encounter = encounterList[| i];
         check += encounter[? "chance"];
         if (check &gt; rng) {
-//            show_message(json_encode(encounter));
             returnValue = encounter;
             break;
         }
