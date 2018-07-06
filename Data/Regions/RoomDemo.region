@@ -1,56 +1,60 @@
 [
 	{
 		"name": "Route 1",
-		"grassEncounters": [
-			{
-				"species": "Pidgey",
-				"level": 3,
-				"chance": 1
-			},
-			{
-				"species": "Rattata",
-				"level": 2,
-				"chance": 5
-			}
-		],
-		"waterEncounters": [
-			{
-				"species": "Goldeen",
-				"level": 5,
-				"chance": 1
-			}
-		],
-		"fishingEncounters": [
-			{
-				"species": "Magikarp",
-				"level": 5,
-				"chance": 10
-			},
-			{
-				"species": "Seel",
-				"level": 10,
-				"chance": 1
-			}
-		],
-		"caveEncounters": []
+		"encounters": {
+			"grass": [
+				{
+					"species": "Pidgey",
+					"level": 3,
+					"chance": 1
+				},
+				{
+					"species": "Rattata",
+					"level": 2,
+					"chance": 5
+				}
+			],
+			"water": [
+				{
+					"species": "Goldeen",
+					"level": 5,
+					"chance": 1
+				}
+			],
+			"cave": [],
+			"fishing": [
+				{
+					"species": "Seel",
+					"level": 10,
+					"chance": 1
+				},
+				{
+					"species": "Magikarp",
+					"level": 5,
+					"chance": 10
+				}
+			]
+		}
 	},
 	{
 		"name": "Pallette Town",
-		"grassEncounters": [],
-		"waterEncounters": [
-			{
-				"species": "Magikarp",
-				"level": 8,
-				"chance": 1
-			}
-		],
-		"fishingEncounters": [
-			{
-				"species": "Magikarp",
-				"level": 3,
-				"chance": 1
-			}
-		],
-		"caveEncounters": []		
+		"encounters": {
+			"grass": [],
+			"water": [
+				{
+					"species": "Magikarp",
+					"level": 8,
+					"chance": 1
+				}
+			],
+			"cave": [],
+				"fishing": [
+				{
+					"species": "Magikarp",
+					"level": 3,
+					"chance": 1
+				}
+			]
+		}	
 	}
 ]

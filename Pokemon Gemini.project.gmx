@@ -3,11 +3,11 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="4" name="datafiles">
+  <datafiles number="6" name="datafiles">
     <datafile>
       <name>Data.zip</name>
       <exists>-1</exists>
-      <size>474</size>
+      <size>483</size>
       <exportAction>2</exportAction>
       <exportDir></exportDir>
       <overwrite>0</overwrite>
@@ -70,6 +70,7 @@
   <backgrounds name="background">
     <background>background\RegionTiles</background>
     <background>background\CollisionTiles</background>
+    <background>background\TerrainTiles</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -83,7 +84,9 @@
       <scripts name="Sorting">
         <script>scripts\quicksort_custom.gml</script>
         <script>scripts\basic_comparator.gml</script>
+        <script>scripts\sortByWeight.gml</script>
       </scripts>
+      <script>scripts\array.gml</script>
     </scripts>
     <scripts name="GUI">
       <script>scripts\gui_draw_battle_menu.gml</script>
@@ -145,6 +148,7 @@
     <objects name="Managers">
       <object>objects\SoundManager</object>
       <object>objects\RegionManager</object>
+      <object>objects\TerrainManager</object>
     </objects>
     <objects name="Overworld">
       <objects name="Characters">

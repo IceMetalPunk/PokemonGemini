@@ -39,20 +39,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>currentRegion = undefined;
-regionName = "";
-encounters = undefined;
+            <string>terrainTypes = array("grass", "doubleGrass", "water", "shore", "cave", "indoor");
 
-terrain = "none";
 
-animationStage = -1;
-animationOffset = 0;
+methods[? "getTerrain"] = 0;
+methods[? "getEncounter"] = 1;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="7" enumb="11">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -69,31 +66,68 @@ animationOffset = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!instance_exists(Player)) {
+            <string>/// getEncounter
+if (is_undefined(RegionManager.encounters)) {
+    returnValue = undefined;
     exit;
 }
 
-var xx = Player.x, yy = Player.y;
+event_user(0);
+var type = returnValue;
 
-var tile = tile_layer_find(1000000, xx, yy);
-if (tile != -1) {
-    var regionID = tile_get_left(tile);
-    regionID = (regionID div 16);
+if (ds_map_exists(RegionManager.encounters, type)) {
+    var encounterList = RegionManager.encounters[? type];
+// FIXME: Quicksort crashes saying iterator "j" is not a number?
+//    quicksort_custom(encounterList, 0, ds_list_size(encounterList)-1, "sortByWeight");
     
-    if (ds_list_size(global.regionMap) &lt;= regionID) {
-        show_error("Tried to load region " + string(regionID) + " but there are not enough regions in room " + room_get_name(room), true);
+    var sum = 0, encounter;
+    for (var i = 0; i &lt; ds_list_size(encounterList); ++i) {
+        encounter = encounterList[| i];
+        sum += encounter[? "chance"];
     }
-    
-    var region = global.regionMap[| regionID];
-    
-    if (!is_undefined(region) &amp;&amp; region != currentRegion) {
-        regionName = region[? "name"];
-        encounters = region[? "encounters"];
-        currentRegion = region;
-        animationStage = 0;
-        animationOffset = 0;
-    }
-    
+    var rng = irandom(sum-1), check = 0;
+    for (var i = 0; i &lt; ds_list_size(encounterList); ++i) {
+        encounter = encounterList[| i];
+        check += encounter[? "chance"];
+        if (check &gt; rng) {
+//            show_message(json_encode(encounter));
+            returnValue = encounter;
+            break;
+        }
+    }   
+}
+else {
+    returnValue = undefined;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var tile = tile_layer_find(999998, arguments[0], arguments[1]);
+if (tile_exists(tile)) {
+    var index = (tile_get_left(tile) div 16);
+    returnValue = terrainTypes[index];
+}
+else {
+    returnValue = "none";
 }
 </string>
           </argument>
@@ -117,95 +151,7 @@ if (tile != -1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Load region data
-if (!is_undefined(global.regionMapCleanup)) {
-    ds_map_destroy(global.regionMapCleanup);
-    global.regionMapCleanup = undefined;
-}
-var regionDataLoaded = load_regions();
-
-// Hide functional tiles
-tile_layer_hide(1000000);
-tile_layer_hide(999999);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Assume no player = not overworld and cancel all drawing of region names.
-if (!instance_exists(Player)) {
-    exit;
-}
-
-// Drop-down stage of region name animation
-if (animationStage == 0) {
-    animationOffset += 2;
-
-    draw_set_font(global.OPTION_FONT);    
-    draw_set_color(c_white);
-    draw_rectangle(0, -20 + animationOffset - 2, 10 + string_width(regionName), -20 + animationOffset + string_height(regionName) + 2, 0);
-    draw_set_color(c_black);
-    draw_text(5, -20 + animationOffset, regionName);
-    if (animationOffset &gt;= 22) {
-        animationOffset = 0;
-        animationStage = 1;
-    }
-    draw_set_font(-1);
-}
-// Delay stage of region name animation
-else if (animationStage == 1) {
-    ++animationOffset;
-    
-    draw_set_font(global.OPTION_FONT);
-    draw_set_color(c_white);
-    draw_rectangle(0, 0, 10 + string_width(regionName), 4 + string_height(regionName), 0);
-    draw_set_color(c_black);
-    draw_text(5, 2, regionName);
-    if (animationOffset &gt;= 45) {
-        animationOffset = 0;
-        animationStage = 2;
-    }
-    draw_set_font(-1);
-}
-// Fade-out stage of region name animation
-else if (animationStage == 2) {
-    animationOffset += 0.05;
-    
-    draw_set_font(global.OPTION_FONT);
-    var oalpha = draw_get_alpha();
-    draw_set_alpha(1 - animationOffset);
-    
-    draw_set_color(c_white);
-    draw_rectangle(0, 0, 10 + string_width(regionName), 4 + string_height(regionName), 0);
-    draw_set_color(c_black);
-    
-    draw_text(5, 2, regionName);
-    draw_set_alpha(oalpha);
-    
-    if (animationOffset &gt;= 1) {
-        animationStage = -1;
-        animationOffset = 0;
-    }
-    draw_set_font(-1);
-    
-}
+            <string>//tile_layer_hide(999998);
 </string>
           </argument>
         </arguments>

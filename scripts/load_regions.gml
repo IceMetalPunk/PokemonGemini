@@ -22,7 +22,7 @@ while (!file_text_eof(file)) {
 }
 file_text_close(file);
 
-global.regionMap = json_decode(jsonString);
-global.regionMap = global.regionMap[? "default"];
+global.regionMapCleanup = json_decode(jsonString);
+global.regionMap = global.regionMapCleanup[? "default"];
 
 return true;

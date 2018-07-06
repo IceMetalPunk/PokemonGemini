@@ -43,9 +43,12 @@
 goToY = y;
 spd = 2;
 runningModifier = 1;
+isSurfing = false;
 
 image_speed = 0;
 image_index = 0;
+
+drawEncounter = "";
 </string>
           </argument>
         </arguments>
@@ -69,6 +72,7 @@ image_index = 0;
           <argument>
             <kind>1</kind>
             <string>// Movement
+var moved = false;
 if (x == goToX &amp;&amp; y == goToY) {
 
     if (keyboard_check(vk_shift)) {
@@ -104,25 +108,82 @@ if (x == goToX &amp;&amp; y == goToY) {
     }
     else if (keyboard_check(vk_down) &amp;&amp; !side_solid(goToX, goToY + 16, MASK_TOP)) {
         goToY += 16;
-    }
+    }    
     else {
         image_index = 0;
         image_speed = 0;
     }
     
+    var destTerrain = call_method(TerrainManager, "getTerrain", goToX, goToY);
+    if ((destTerrain == "water" || destTerrain == "shore") &amp;&amp; !isSurfing) {
+        goToX = x;
+        goToY = y;
+        image_index = 0;
+        image_speed = 0;
+    }
+    else if (destTerrain != "water" &amp;&amp; destTerrain != "shore" &amp;&amp; isSurfing) {
+        goToX = x;
+        goToY = y;
+        image_index = 0;
+        image_speed = 0;
+    }
+    
 }
+
 else if (x != goToX) {
+    moveed = true;
     var dir = sign(goToX - x);
     
     x += runningModifier * spd * dir;
     image_speed = 0.2;
 }
 else if (y != goToY) {
+    moved = true;
     var dir = sign(goToY - y);
     
     y += runningModifier * spd * dir;
     image_speed = 0.2;
 }
+
+// Trigger encounters
+if (moved &amp;&amp; x == goToX &amp;&amp; y == goToY) {
+    var encounter = call_method(TerrainManager, "getEncounter", goToX, goToY);
+    if (!is_undefined(encounter)) {
+        if (irandom(19) == 1) {
+            drawEncounter = encounter[? "species"];
+        }
+        else {
+            drawEncounter = "No Such Luck";
+        }
+    }
+    else {
+        drawEncounter = "No Such Encounter";
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+draw_text(10, 50, drawEncounter);
 </string>
           </argument>
         </arguments>

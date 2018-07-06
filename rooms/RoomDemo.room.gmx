@@ -178,6 +178,14 @@ for (var index = 0; index &lt; 10; ++index) {
     <tile bgName="CollisionTiles" x="112" y="160" w="16" h="16" xo="240" yo="0" id="10000157" name="inst_27D6CD73" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="CollisionTiles" x="112" y="176" w="16" h="16" xo="240" yo="0" id="10000158" name="inst_4BA8E691" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="CollisionTiles" x="144" y="192" w="16" h="16" xo="16" yo="0" id="10000163" name="inst_15B299AD" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="TerrainTiles" x="112" y="208" w="16" h="16" xo="0" yo="0" id="10000195" name="inst_B39C5BCB" depth="999998" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="TerrainTiles" x="96" y="208" w="16" h="16" xo="0" yo="0" id="10000196" name="inst_4E5C286D" depth="999998" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="TerrainTiles" x="112" y="96" w="16" h="16" xo="0" yo="0" id="10000201" name="inst_1BB97BD4" depth="999998" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="TerrainTiles" x="128" y="96" w="16" h="16" xo="0" yo="0" id="10000202" name="inst_3E5DD692" depth="999998" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="TerrainTiles" x="128" y="112" w="16" h="16" xo="0" yo="0" id="10000203" name="inst_9A706F6E" depth="999998" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="TerrainTiles" x="144" y="112" w="16" h="16" xo="0" yo="0" id="10000204" name="inst_7515D1CD" depth="999998" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="TerrainTiles" x="144" y="96" w="16" h="16" xo="0" yo="0" id="10000205" name="inst_52A24DFF" depth="999998" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="TerrainTiles" x="144" y="128" w="16" h="16" xo="0" yo="0" id="10000206" name="inst_C515D755" depth="999998" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
