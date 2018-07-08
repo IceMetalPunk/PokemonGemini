@@ -49,8 +49,12 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>init_fonts();
+            <string>global.monsterList = ds_list_create();
+global.monsterMap = ds_map_create();
+
+init_fonts();
 init_data();
+init_monsters();
 // ...load other resources...
 
 alarm[0]=1;

@@ -1,0 +1,32 @@
+{
+	"name": "Wetatide",
+	"catchRate": 240,
+	"evolvesTo": [],
+	"evolvesFrom": "Maotide",
+	"types": ["Bug"],
+	"description": {
+		"Castor": "Wetatide are sometimes feared for their large stature, but this is mostly a false show of strength.",
+		"Pollux": "Despite its large size, Wetatide mostly only eat plants and other bugs."
+	},
+	"baseStats": {
+		"HP": 70,
+		"Attack": 70,
+		"Defense": 91,
+		"Special Attack": 55,
+		"Special Defense": 50,
+		"Speed": 97,
+		"Experience": 140
+	},
+	"EVs": {
+		"HP": 0,
+		"Attack": 0,
+		"Defense": 0,
+		"Special Attack": 0,
+		"Special Defense": 0,
+		"Speed": 2
+	},
+	"moves": {
+		"Bite": 1,
+		"Scratch": 1
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"name": "Maerail",
+	"catchRate": 240,
+	"evolvesTo": [],
+	"evolvesFrom": "Schnozao",
+	"types": ["Normal", "Dark"],
+	"description": {
+		"Castor": "Maerail do not take kindly to trespassers in the trees they call home and will attack invaders aggressively.",
+		"Pollux": "Maerail are sometimes seen using the bones of their prey as weapons against enemies."
+	},
+	"baseStats": {
+		"HP": 70,
+		"Attack": 70,
+		"Defense": 91,
+		"Special Attack": 55,
+		"Special Defense": 50,
+		"Speed": 97,
+		"Experience": 140
+	},
+	"EVs": {
+		"HP": 0,
+		"Attack": 0,
+		"Defense": 0,
+		"Special Attack": 0,
+		"Special Defense": 0,
+		"Speed": 2
+	},
+	"moves": {
+		"Bite": 1,
+		"Scratch": 1,
+		"Pound": 5,
+		"Body Slam": 10
+	}
+}

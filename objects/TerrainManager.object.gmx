@@ -86,12 +86,18 @@ if (ds_map_exists(RegionManager.encounters, type)) {
     }
     var rng = irandom(sum-1), check = 0;
     for (var i = 0; i &lt; ds_list_size(encounterList); ++i) {
-        encounter = encounterList[| i];
+        encounter = json_decode(json_encode(encounterList[| i]));
         check += encounter[? "chance"];
         if (check &gt; rng) {
+//            show_message("Encountered: "+ encounter[? "species"]);
+            encounter[? "species"] = global.monsterMap[? encounter[? "species"]];
+//            show_message("Index: "+ string(encounter[? "species"]));
+            encounter[? "species"] = global.monsterList[| encounter[? "species"]];
+  //          show_message("Map Data: "+json_encode(encounter[? "species"]));
             returnValue = encounter;
             break;
         }
+        ds_map_destroy(encounter);
     }   
 }
 else {

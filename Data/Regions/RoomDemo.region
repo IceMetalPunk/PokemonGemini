@@ -4,12 +4,12 @@
 		"encounters": {
 			"grass": [
 				{
-					"species": "Pidgey",
+					"species": "Schnozao",
 					"level": 3,
 					"chance": 1
 				},
 				{
-					"species": "Rattata",
+					"species": "Maotide",
 					"level": 2,
 					"chance": 5
 				}

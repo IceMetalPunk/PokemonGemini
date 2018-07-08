@@ -1,0 +1,39 @@
+{
+	"name": "Schnozao",
+	"catchRate": 253,
+	"evolvesTo": [
+		{
+			"type": "level",
+			"level": 28,
+			"to": "Maerail"
+		}
+	],
+	"evolvesFrom": "",
+	"types": ["Normal"],
+	"description": {
+		"Castor": "Once mistaken for wild men, the clothing it wears is skinned directly from its prey.",
+		"Pollux": "A rumor says it kills its prey with its fingernails, but biologists have found no evidence they even have fingers."
+	},
+	"baseStats": {
+		"HP": 55,
+		"Attack": 60,
+		"Defense": 81,
+		"Special Attack": 50,
+		"Special Defense": 45,
+		"Speed": 97,
+		"Experience": 51
+	},
+	"EVs": {
+		"HP": 0,
+		"Attack": 0,
+		"Defense": 0,
+		"Special Attack": 0,
+		"Special Defense": 0,
+		"Speed": 1
+	},
+	"moves": {
+		"Bite": 1,
+		"Scratch": 1,
+		"Pound": 5
+	}
+}

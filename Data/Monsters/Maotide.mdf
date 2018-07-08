@@ -1,0 +1,38 @@
+{
+	"name": "Maotide",
+	"catchRate": 255,
+	"evolvesTo": [
+		{
+			"type": "level",
+			"level": 30,
+			"to": "Wetatide"
+		}
+	],
+	"evolvesFrom": "",
+	"types": ["Bug"],
+	"description": {
+		"Castor": "Sometimes considered a pest, a wild Maotide is mostly harmless to humans.",
+		"Pollux": "Though Maotide are generally harmless, a bite or scratch from one can still be painful."
+	},
+	"baseStats": {
+		"HP": 55,
+		"Attack": 60,
+		"Defense": 81,
+		"Special Attack": 50,
+		"Special Defense": 45,
+		"Speed": 97,
+		"Experience": 51
+	},
+	"EVs": {
+		"HP": 0,
+		"Attack": 0,
+		"Defense": 0,
+		"Special Attack": 0,
+		"Special Defense": 0,
+		"Speed": 1
+	},
+	"moves": {
+		"Bite": 1,
+		"Scratch": 1
+	}
+}

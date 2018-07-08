@@ -150,7 +150,14 @@ if (moved &amp;&amp; x == goToX &amp;&amp; y == goToY) {
     var encounter = call_method(TerrainManager, "getEncounter", goToX, goToY);
     if (!is_undefined(encounter)) {
         if (irandom(19) == 1) {
-            drawEncounter = encounter[? "species"];
+            var species = encounter[? "species"];
+            drawEncounter = species[? "name"];
+            var types = species[? "types"];
+            drawEncounter += "#" + types[| 0] + "#Level "+string(encounter[? "level"]);
+            
+            // Do other encountery things.
+            // Once done with the encounter map...
+            ds_map_destroy(encounter);
         }
         else {
             drawEncounter = "No Such Luck";
